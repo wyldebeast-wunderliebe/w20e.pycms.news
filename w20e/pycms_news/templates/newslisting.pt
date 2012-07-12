@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xml:lang="en"
+      i18n:domain="pycms"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="body.macros['master']"
+      >
+
+  <head/>
+
+  <body>
+
+    <div id="content" metal:fill-slot="content">
+      
+	    <tal:repeat repeat="ref view.listnews()">
+	      
+        <div class="news">	    
+          <h3 class="newstitle">${ref.title}</h3>
+          <div class="newsdate">${ref.date}</div>
+          <div style="clear: both">&nbsp;</div>
+	        <div tal:content="structure ref.text"></div>	     
+        </div>
+	      
+	    </tal:repeat>
+    </div>    
+  
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<configure xmlns="http://pylonshq.com/pyramid"
+           xmlns:pycms="http://w20e.com/pycms"
+>
+  <include package="pyramid_zcml"/>
+  <include package="w20e.pycms" file="catalog.zcml" />
+
+  <include package=".views"/>
+  <include package=".models"/>
+
+</configure>

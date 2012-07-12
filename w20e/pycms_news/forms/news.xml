@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+     
+<form id="nieuws">
+
+  <data>
+    <title/>
+    <text/>
+  </data>
+
+  <model>
+    <properties id="required">
+      <bind>title</bind>
+      <bind>text</bind>
+      <required>True</required>
+    </properties>
+  </model>
+
+  <view>
+
+    <input id="title" bind="title">
+      <label>Titel</label>
+    </input>
+
+    <richtext id="text" bind="text">
+      <property name="rows">5</property>
+      <property name="cols">200</property>
+      <label>Referentie tekst</label>
+    </richtext>
+
+    <group id="submission" layout="flow">
+      <property name="orientation">h</property>
+
+      <submit id="save">
+        <label>Opslaan</label>
+      </submit>
+      
+      <cancel id="cancel">
+        <label>Afbreken</label>
+      </cancel>
+    </group>
+
+  </view>
+
+  <submission type="attr">
+     <property name="attr_name">_DATA</property>	
+  </submission>
+
+</form>

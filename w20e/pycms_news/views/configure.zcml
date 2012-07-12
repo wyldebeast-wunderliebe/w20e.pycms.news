@@ -1,0 +1,25 @@
+<configure xmlns="http://pylonshq.com/pyramid">
+
+  <include package="pyramid_zcml"/>
+
+  <view
+     context="w20e.hitman.models.base.IContent"
+     view=".news.NewsViewlet"
+     renderer="w20e.pycms_news:templates/newsviewlet.pt"
+     name="newslisting"
+     />
+
+  <view
+     context="w20e.pycms_news.models.news.News"
+     view=".news.NewsView"
+     renderer="w20e.pycms_news:templates/news.pt"
+     />
+
+  <view
+     context="w20e.hitman.models.base.IContent"
+     view=".news.NewsListingView"
+     renderer="w20e.pycms_news:templates/newslisting.pt"
+     name="++news"
+     />
+
+</configure>

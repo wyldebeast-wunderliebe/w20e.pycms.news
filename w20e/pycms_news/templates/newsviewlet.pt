@@ -1,0 +1,10 @@
+<tal:repeat repeat="news newslisting">
+  <div class="newssummary">
+    <div class="newstitle">
+      <a href="${news['url']}">${news['title']}</a>
+    </div>
+    <div class="newsdate">${news['date']}</div>
+  </div>
+</tal:repeat>
+
+<a href="./++news">more news...</a>

@@ -1,0 +1,16 @@
+<configure xmlns="http://pylonshq.com/pyramid"
+           xmlns:pycms="http://w20e.com/pycms"
+>
+
+  <pycms:ctype
+     name="nieuws"
+     factory="w20e.pycms_news.models.news.News"
+     icon="/raadhuys_static/news_icon.png"
+     />
+
+  <pycms:ctype
+      name="site"
+      subtypes="nieuws,page,form,file,folder"
+      />
+
+</configure>

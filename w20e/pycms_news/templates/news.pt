@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xml:lang="en"
+      i18n:domain="riant"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="body.macros['master']"
+      >
+
+  <head>
+     <metal:fill-slot fill-slot="extra_css_slot">
+      <link rel="stylesheet" href="${request.application_url}/page.css"
+            type="text/css" media="screen" charset="utf-8" />
+    </metal:fill-slot>
+  </head>
+
+
+  <body>
+
+    <div id="content" metal:fill-slot="content">
+      <h1 tal:content="view.title">Title</h1>
+      
+      <div class="news">	    
+        <div class="newsdate">${view.date}</div>
+        <div style="clear: both">&nbsp;</div>
+	      <div tal:content="structure context.text"></div>	     
+      </div>
+	      
+    </div>    
+  
+    </body>
+</html>
