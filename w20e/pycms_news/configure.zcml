@@ -7,4 +7,6 @@
   <include package=".views"/>
   <include package=".models"/>
 
+  <translationdir dir="w20e.pycms_news:locale/"/>
+
 </configure>

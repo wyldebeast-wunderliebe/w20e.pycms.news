@@ -1,0 +1,3 @@
+recursive-include w20e *
+global-exclude *pyc
+global-exclude *~

@@ -1,10 +1,16 @@
-<tal:repeat repeat="news newslisting">
-  <div class="newssummary">
-    <div class="newstitle">
-      <a href="${news['url']}">${news['title']}</a>
+<div
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+   xmlns:tal="http://xml.zope.org/namespaces/tal"
+   i18n:domain="w20e.pycms"
+>
+  <tal:repeat repeat="news newslisting">
+    <div class="newssummary">
+      <div class="newstitle">
+        <a href="${news['url']}">${news['title']}</a>
+      </div>
+      <div class="newsdate">${news['date']}</div>
     </div>
-    <div class="newsdate">${news['date']}</div>
-  </div>
-</tal:repeat>
-
-<a href="./++news">more news...</a>
+  </tal:repeat>
+  
+  <a href="./++news" i18n:translate="more_news">more news...</a>
+</div>
