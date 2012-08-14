@@ -1,3 +1,7 @@
+1.1.0a
+======
+* dependency on w20e.pycms 1.1.0a, for using natures
+
 1.0.1a
 ======
 * added i18n

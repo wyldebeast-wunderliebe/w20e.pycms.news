@@ -3,7 +3,7 @@
    xmlns:tal="http://xml.zope.org/namespaces/tal"
    i18n:domain="w20e.pycms"
 >
-  <tal:repeat repeat="news newslisting">
+  <tal:repeat repeat="news view.news">
     <div class="newssummary">
       <div class="newstitle">
         <a href="${news['url']}">${news['title']}</a>
@@ -12,5 +12,6 @@
     </div>
   </tal:repeat>
   
-  <a href="./++news" i18n:translate="more_news">more news...</a>
+  <a tal:condition="view.has_more_news" 
+     href="./++news" i18n:translate="more_news">more news...</a>
 </div>

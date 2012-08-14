@@ -5,8 +5,12 @@
   <include package="w20e.pycms" file="catalog.zcml" />
 
   <include package=".views"/>
-  <include package=".models"/>
 
   <translationdir dir="w20e.pycms_news:locale/"/>
+
+  <pycms:nature
+      name="news"
+      interface="w20e.pycms_news.interfaces.INews"
+      />
 
 </configure>
