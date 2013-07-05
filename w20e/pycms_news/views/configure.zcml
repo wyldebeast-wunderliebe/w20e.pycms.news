@@ -10,7 +10,7 @@
      />
 
   <view
-     context="w20e.pycms_news.models.news.News"
+     context="w20e.pycms_news.interfaces.INews"
      view=".news.NewsView"
      renderer="w20e.pycms_news:templates/news.pt"
      />

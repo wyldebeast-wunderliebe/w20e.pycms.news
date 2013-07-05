@@ -10,6 +10,7 @@
 
   <pycms:nature
       name="news"
+      for="w20e.pycms.models.interfaces.IPage"
       interface="w20e.pycms_news.interfaces.INews"
       />
 
